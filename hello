@@ -1,0 +1,38 @@
+if(player2.isTouching(checker)){
+    fill("white")
+    textSize(30)
+    text("Press 'e' to press the button",500,400)
+  }
+  if(player2.isTouching(checker)&& keyDown("e")){
+pressed = 1
+
+
+  }
+
+  if(pressed === 1){
+    box.visible = true;
+  }
+
+if(keyDown(LEFT_ARROW)){
+  key = 1;
+  writePosition(-5,0);
+}
+else if(keyDown(RIGHT_ARROW)){
+  key = 1;
+  writePosition(5,0);
+}
+
+
+if(player2.collide(invisibleGround)|| player2.collide(invisibleGround1)|| player2.collide(invisibleGround2)|| player2.collide(invisibleGround3)|| player2.collide(invisibleGround4)|| player2.collide(invisibleGround5)|| player2.collide(box)|| player2.collide(invisibleGround6)|| player2.collide(invisibleGround7)|| player2.collide(invisibleGround8)|| player2.collide(invisibleGround9)){
+if(keyDown(UP_ARROW)){
+  key = 1;
+  player2.velocityY = -15;
+  writePosition(0,-15);
+}
+else if(keyDown(DOWN_ARROW)){
+  key = 1;
+  writePosition(0,+5);
+}
+
+
+}
